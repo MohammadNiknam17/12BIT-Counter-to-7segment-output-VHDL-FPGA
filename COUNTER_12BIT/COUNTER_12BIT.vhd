@@ -68,7 +68,7 @@ binary_to_bcd_proc: process(TMP1)
     
 		for i in 0 to 11 loop
         
-			--bit shifting. Copy the bint MSB in the bcd LSB
+			--bit shifting. Copy the TMP MSB in the bcd LSB
 			bcd(11 downto 0) := bcd(10 downto 0) & TMP(11);
 			TMP(11 downto 0) := TMP(10 downto 0) & '0';
 
